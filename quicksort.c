@@ -1,10 +1,10 @@
 #include<stdio.h>
 
 
-void print_array(int arr[], int n)
+void print_array(int arr[], int size)
 {
     int i;
-    for(i=0 ; i<n ; i++)
+    for(i=0 ; i<size ; i++)
 {
     printf("%d ", arr[i]);
 }
@@ -54,12 +54,12 @@ void quick_sort(int arr[], int lb, int ub)
 int main()
 {
     int arr[] = {2, 3, 12, 1, 8, 7, 10, 6};
-    int n = sizeof(arr)/sizeof(arr[0]);
-    print_array(arr, n);
-    quick_sort(arr, 0, n-1);
+    int size = sizeof(arr)/sizeof(arr[0]);
+    print_array(arr, size);
+    quick_sort(arr, 0, size-1);
     printf("\n");
     printf("the sorted array is: \n");
-    print_array(arr, n);
+    print_array(arr, size);
     return 0;
 
 }
